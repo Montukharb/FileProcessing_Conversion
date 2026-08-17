@@ -4,135 +4,197 @@ A full-stack file processing and conversion platform built with
 ASP.NET Core Web API, Angular, and a Modular Monolith
 architecture.
 
+Bilkul. Neeche **actual `README.md` Markdown source** de raha hoon — directly GitHub repository ke `README.md` me paste kar sakte ho. Isme professional UI, badges, feature cards, architecture, project structure, workflow aur tech stack included hain.
 
+````markdown
+# 📁 FileProcess & Conversion
 
+<p align="center">
+  <img src="https://img.shields.io/badge/.NET-10-512BD4?style=for-the-badge&logo=dotnet&logoColor=white" alt=".NET 10"/>
+  <img src="https://img.shields.io/badge/ASP.NET%20Core-Web%20API-512BD4?style=for-the-badge&logo=dotnet&logoColor=white" alt="ASP.NET Core"/>
+  <img src="https://img.shields.io/badge/Angular-21-DD0031?style=for-the-badge&logo=angular&logoColor=white" alt="Angular"/>
+  <img src="https://img.shields.io/badge/SQL%20Server-CC2927?style=for-the-badge&logo=microsoftsqlserver&logoColor=white" alt="SQL Server"/>
+</p>
 
+<p align="center">
+  <strong>Full-Stack Image & Document Processing Platform</strong>
+</p>
 
+<p align="center">
+  A modular monolith application for image processing, document conversion,
+  file compression, and other file utilities.
+</p>
 
+---
 
-✨ Overview
+## 🚀 Overview
 
-FileProcess & Conversion is a full-stack application for image and
-document processing. It provides a set of practical file utilities
-through secure RESTful APIs and a modern web interface.
+**FileProcess & Conversion** is a full-stack application designed to provide
+multiple image, document, and file-processing utilities through a modern web
+interface and secure RESTful APIs.
 
-The project is designed around a Modular Monolith architecture, with
-functionality organized into feature-based modules while keeping
-shared infrastructure and database migrations separated from the
-application modules.
+The backend follows a **Modular Monolith architecture** with
+**feature-based modules**, while shared infrastructure and Entity Framework
+Core migrations are maintained separately.
 
-What it can do
+The application focuses on clean module boundaries, asynchronous file
+processing, centralized exception handling, and maintainable backend
+architecture.
 
-🖼️ Image compression
+---
 
-📐 Image resizing
+## ✨ Features
 
-✂️ Image cropping
+<table>
+<tr>
+<td width="50%">
 
-🔄 Image format conversion
+### 🖼️ Image Processing
 
-📦 ZIP / Unzip operations
+- Image Compression
+- Image Resizing
+- Image Cropping
+- JPG Conversion
+- PNG Conversion
+- WebP Conversion
 
-📄 Image → PDF conversion
+</td>
 
-🖼️ PDF → Image conversion
+<td width="50%">
 
-⚡ Asynchronous file processing
+### 📄 Document Processing
 
-🛡️ Centralized exception handling
+- Image → PDF
+- PDF → Image
+- PDF page processing
+- Document conversion utilities
 
-🔐 Secure RESTful APIs
+</td>
+</tr>
 
-🧩 Feature-based modular architecture
+<tr>
+<td width="50%">
 
-🚀 Features
+### 📦 File Utilities
 
-Feature                             Description
+- ZIP files
+- Unzip files
+- Multiple file processing
+- File validation
+- Processed file output
 
-🗜️ Image Compression            Reduce image size while maintaining
-practical visual quality
+</td>
 
-📐 Image Resizing               Resize images using configurable
-dimensions
+<td width="50%">
 
-✂️ Image Cropping               Crop images according to required
-dimensions
+### ⚙️ Backend
 
-🔄 Format Conversion            Convert between JPG, PNG, and WebP
+- RESTful APIs
+- Async file processing
+- Dependency Injection
+- Centralized exception handling
+- Feature-based modules
+- Modular Monolith architecture
 
-📦 ZIP / Unzip                  Compress multiple files and extract
-ZIP archives
+</td>
+</tr>
+</table>
 
-🖼️ Image → PDF                  Convert images into PDF documents
+---
 
-📄 PDF → Image                  Convert PDF pages into image files
+# 🏗️ Architecture
 
-⚡ Async Processing             Process file operations
-asynchronously to improve API
-responsiveness
+The backend follows a **Modular Monolith + Feature-Based Module**
+architecture.
 
-🛡️ Exception Handling           Centralized handling of application
-and processing errors
+```text
+                         ┌──────────────────────┐
+                         │      Angular UI      │
+                         │    Presentation      │
+                         └──────────┬───────────┘
+                                    │
+                               HTTP / REST
+                                    │
+                                    ▼
+                 ┌─────────────────────────────────────┐
+                 │          ASP.NET Core API            │
+                 │                                     │
+                 │        Modular Monolith             │
+                 │                                     │
+                 │  ┌───────────────────────────────┐  │
+                 │  │      Image Processing         │  │
+                 │  │           Module              │  │
+                 │  └───────────────────────────────┘  │
+                 │                                     │
+                 │  ┌───────────────────────────────┐  │
+                 │  │     Document Processing       │  │
+                 │  │           Module              │  │
+                 │  └───────────────────────────────┘  │
+                 │                                     │
+                 │  ┌───────────────────────────────┐  │
+                 │  │       File Operations         │  │
+                 │  │           Module              │  │
+                 │  └───────────────────────────────┘  │
+                 │                                     │
+                 │  ┌───────────────────────────────┐  │
+                 │  │    Shared Infrastructure      │  │
+                 │  └───────────────────────────────┘  │
+                 └──────────────────┬──────────────────┘
+                                    │
+                                    ▼
+                         ┌──────────────────────┐
+                         │      SQL Server      │
+                         │      Database        │
+                         └──────────────────────┘
 
-🏗️ Architecture
+                         ┌──────────────────────┐
+                         │  Separate Migration  │
+                         │       Assembly       │
+                         └──────────────────────┘
+````
 
-The application follows a Modular Monolith + Feature-Based Module
-approach.
+---
 
-┌──────────────────────────────────────────────────────────────┐
-│                         Angular UI                           │
-│                    Presentation Layer                        │
-└─────────────────────────────┬────────────────────────────────┘
-                              │ HTTP / REST
-                              ▼
-┌──────────────────────────────────────────────────────────────┐
-│                     ASP.NET Core API                         │
-│                                                              │
-│   ┌──────────────────┐  ┌──────────────────┐                │
-│   │ Image Processing │  │ Document Process │                │
-│   │     Module       │  │      Module      │                │
-│   └──────────────────┘  └──────────────────┘                │
-│                                                              │
-│   ┌──────────────────┐  ┌──────────────────┐                │
-│   │ File Operations  │  │ Shared Services  │                │
-│   │     Module       │  │ / Infrastructure │                │
-│   └──────────────────┘  └──────────────────┘                │
-└─────────────────────────────┬────────────────────────────────┘
-                              │
-                              ▼
-┌──────────────────────────────────────────────────────────────┐
-│                     Persistence Layer                        │
-│                         SQL Server                           │
-└──────────────────────────────────────────────────────────────┘
+# 🧩 Modular Monolith
 
-                 ┌──────────────────────────┐
-                 │ Separate Migration       │
-                 │ Assembly / Project       │
-                 └──────────────────────────┘
+Instead of building the application as one large tightly-coupled project,
+features are organized into independent modules inside a single deployable
+application.
 
-Architectural principles
+```text
+                    FileProcess Application
+                            │
+          ┌─────────────────┼─────────────────┐
+          │                 │                 │
+          ▼                 ▼                 ▼
+   Image Processing   Document Processing   File Operations
+       Module              Module              Module
+          │                 │                 │
+          └─────────────────┼─────────────────┘
+                            │
+                            ▼
+                  Shared Infrastructure
+                            │
+                            ▼
+                       SQL Server
+```
 
-Modular Monolith --- one deployable application with clearly
-isolated business modules.
+### Key architectural principles
 
-Feature-Based Modules --- functionality is grouped by feature
-rather than creating one large shared layer.
+* **Modular Monolith**
+* **Feature-Based Modules**
+* **Separation of Concerns**
+* **Dependency Injection**
+* **Shared Infrastructure**
+* **Dedicated Migration Assembly**
+* **Asynchronous Processing**
+* **Centralized Exception Handling**
 
-Shared Infrastructure --- common infrastructure concerns are
-separated and reusable.
+---
 
-Separate Migration Assembly --- EF Core migrations are
-maintained in a dedicated migration project.
+# 📂 Project Structure
 
-Dependency Injection --- dependencies are registered through
-module composition/extension methods.
-
-Separation of Concerns --- API, application logic,
-infrastructure, persistence, and modules have defined
-responsibilities.
-
-📂 Project Structure
-
+```text
 FileProcess/
 │
 ├── Client/
@@ -142,6 +204,7 @@ FileProcess/
 │       └── ...
 │
 ├── Modules/
+│   │
 │   ├── ImageProcessing/
 │   │   ├── Application/
 │   │   ├── Domain/
@@ -168,349 +231,529 @@ FileProcess/
 │
 └── Server/
     └── FileProcessServer/
+```
 
-Note: The structure above represents the architectural
-organization. Rename folders to match the exact project names in the
-repository.
+> The folder names above represent the architectural organization.
+> Adjust the names if your repository uses different project names.
 
-🔄 File Processing Flow
+---
 
-User
+# 🔄 Application Flow
+
+```text
+┌──────────────┐
+│    User      │
+└──────┬───────┘
+       │
+       ▼
+┌──────────────┐
+│  Angular UI  │
+└──────┬───────┘
+       │
+       │ HTTP Request
+       ▼
+┌─────────────────────┐
+│ ASP.NET Core API    │
+└──────────┬──────────┘
+           │
+           ▼
+┌─────────────────────┐
+│ Feature-Based       │
+│ Module              │
+└──────────┬──────────┘
+           │
+           ▼
+┌─────────────────────┐
+│ File Processing     │
+│ / Conversion        │
+└──────────┬──────────┘
+           │
+           ▼
+┌─────────────────────┐
+│ Processed File      │
+└──────────┬──────────┘
+           │
+           ▼
+┌─────────────────────┐
+│ Angular UI / Client  │
+└─────────────────────┘
+```
+
+---
+
+# 🖼️ Image Processing
+
+The application provides multiple image-processing operations.
+
+| Operation         | Supported |
+| ----------------- | :-------: |
+| Compression       |     ✅     |
+| Resize            |     ✅     |
+| Crop              |     ✅     |
+| JPG               |     ✅     |
+| PNG               |     ✅     |
+| WebP              |     ✅     |
+| Format Conversion |     ✅     |
+
+### Example
+
+```text
+             Original Image
+                    │
+                    ▼
+             ┌──────────────┐
+             │ Image Module │
+             └──────┬───────┘
+                    │
+        ┌───────────┼───────────┐
+        ▼           ▼           ▼
+    Compress      Resize       Crop
+        │           │           │
+        └───────────┼───────────┘
+                    │
+                    ▼
+             Processed Image
+```
+
+---
+
+# 📄 Document Processing
+
+Document-related functionality includes:
+
+### Image → PDF
+
+```text
+Image
+  │
+  ▼
+Upload
+  │
+  ▼
+Document Processing Module
+  │
+  ▼
+PDF Generation
+  │
+  ▼
+PDF File
+```
+
+### PDF → Image
+
+```text
+PDF
  │
  ▼
-Angular UI
- │
- │ HTTP Request + File
- ▼
-ASP.NET Core API
+Upload
  │
  ▼
-Feature Module
- │
- ├── Validate Request
- │
- ├── Process File
- │
- ├── Perform Conversion
- │
- └── Return Result
+Document Processing Module
  │
  ▼
-Processed File
+PDF Page Processing
  │
  ▼
-Angular UI
+Image Output
+```
 
-🧰 Tech Stack
+---
 
-Frontend
+# 📦 ZIP / Unzip
 
-Angular 21
+The application also provides file compression and extraction utilities.
 
-TypeScript
+```text
+Multiple Files
+      │
+      ▼
+ File Operations
+      │
+      ▼
+    ZIP File
+```
 
-HTML / CSS
+and
 
-Tailwind CSS
+```text
+   ZIP File
+      │
+      ▼
+ File Operations
+      │
+      ▼
+Extracted Files
+```
 
-Backend
+---
 
-ASP.NET Core Web API
+# ⚡ Asynchronous File Processing
 
-C#
+File processing can involve CPU-intensive operations and file I/O.
 
-.NET 10
+The backend uses asynchronous programming where appropriate to avoid
+unnecessary request-thread blocking.
 
-RESTful APIs
-
-Dependency Injection
-
-Async / Await
-
-Exception Handling
-
-Data & Infrastructure
-
-SQL Server
-
-Entity Framework Core
-
-EF Core Migrations
-
-Separate Migration Assembly
-
-Shared Infrastructure
-
-Architecture
-
-Modular Monolith
-
-Feature-Based Modules
-
-Separation of Concerns
-
-Dependency Injection
-
-Clean module boundaries
-
-📡 API Capabilities
-
-Typical API capabilities include:
-
-POST /api/image/compress
-POST /api/image/resize
-POST /api/image/crop
-POST /api/image/convert
-
-POST /api/file/zip
-POST /api/file/unzip
-
-POST /api/document/image-to-pdf
-POST /api/document/pdf-to-image
-
-Endpoint names may differ from the actual implementation.
-
-⚡ Asynchronous Processing
-
-File operations can be expensive because they involve:
-
-File I/O
-
-Image decoding and encoding
-
-PDF processing
-
-Compression
-
-Format conversion
-
-The backend therefore uses asynchronous programming where appropriate to
-avoid unnecessarily blocking request threads.
-
+```csharp
 public async Task<IActionResult> ProcessFileAsync(IFormFile file)
 {
     // Validate request
+
     // Process file asynchronously
+
     // Return processed file
 }
+```
 
-🛡️ Error Handling
+This approach helps keep the API responsive during file-processing operations.
 
-The API uses centralized exception handling so that processing errors
-can be converted into consistent HTTP responses.
+---
 
-Request
-   │
-   ▼
+# 🛡️ Exception Handling
+
+Application-level errors and file-processing failures are handled through
+centralized exception handling.
+
+```text
+              HTTP Request
+                   │
+                   ▼
+             API Endpoint
+                   │
+                   ▼
+             Feature Module
+                   │
+                   ▼
+            Business Logic
+                   │
+          ┌────────┴────────┐
+          │                 │
+       Success           Exception
+          │                 │
+          ▼                 ▼
+       Response       Global Handler
+                            │
+                            ▼
+                    Consistent Error
+                       Response
+```
+
+---
+
+# 🗃️ Database & Migration Architecture
+
+The application uses:
+
+* SQL Server
+* Entity Framework Core
+* Separate Migration Project
+* Shared Infrastructure
+
+The EF Core migration assembly is separated from the main application.
+
+```text
+             Application
+                  │
+                  ▼
+              DbContext
+                  │
+                  ▼
+        ┌───────────────────┐
+        │ Migration Project │
+        └─────────┬─────────┘
+                  │
+                  ▼
+             SQL Server
+```
+
+This keeps migration-related concerns isolated from the main application
+runtime.
+
+---
+
+# 🧰 Tech Stack
+
+## Frontend
+
+| Technology   | Purpose                 |
+| ------------ | ----------------------- |
+| Angular 21   | Frontend application    |
+| TypeScript   | Application programming |
+| Tailwind CSS | UI styling              |
+
+## Backend
+
+| Technology            | Purpose                 |
+| --------------------- | ----------------------- |
+| C#                    | Backend programming     |
+| .NET 10               | Runtime                 |
+| ASP.NET Core Web API  | REST API                |
+| Entity Framework Core | Data access             |
+| Dependency Injection  | Dependency management   |
+| Async/Await           | Asynchronous processing |
+
+## Database & Infrastructure
+
+| Technology                  | Purpose                        |
+| --------------------------- | ------------------------------ |
+| SQL Server                  | Relational database            |
+| EF Core Migrations          | Database schema management     |
+| Separate Migration Assembly | Migration isolation            |
+| Shared Infrastructure       | Common infrastructure services |
+
+## Architecture
+
+```text
+Modular Monolith
+        +
+Feature-Based Modules
+        +
+Shared Infrastructure
+        +
+Separate Migration Assembly
+```
+
+---
+
+# 📡 API Capabilities
+
+The backend exposes RESTful APIs for file-processing operations.
+
+Example endpoint organization:
+
+```text
+/api/image/compress
+/api/image/resize
+/api/image/crop
+/api/image/convert
+
+/api/file/zip
+/api/file/unzip
+
+/api/document/image-to-pdf
+/api/document/pdf-to-image
+```
+
+> Endpoint names are representative. Use the actual routes implemented in
+> the repository if they differ.
+
+---
+
+# 🔐 API Design
+
+The backend follows RESTful API principles and separates responsibilities
+between:
+
+```text
 Controller / Endpoint
-   │
-   ▼
-Application / Module
-   │
-   ├── Success ──────────────► 200 / 201
-   │
-   └── Exception
-          │
-          ▼
-   Global Exception Handler
-          │
-          ▼
-   Consistent Error Response
+        │
+        ▼
+Application Layer
+        │
+        ▼
+Feature Module
+        │
+        ▼
+Infrastructure
+        │
+        ▼
+Database / File System
+```
 
-🗃️ Database & Migrations
+---
 
-The application uses SQL Server with Entity Framework Core.
+# 🛠️ Getting Started
 
-Database migrations are intentionally maintained in a separate
-migration assembly/project rather than coupling migration execution
-directly to the main API project.
+## Prerequisites
 
-Application / Modules
-          │
-          ▼
-      DbContext
-          │
-          ▼
-   Migration Project
-          │
-          ▼
-      SQL Server
+Make sure you have the following installed:
 
-This keeps database migration concerns isolated from the main
-application runtime.
+* [.NET 10 SDK](https://dotnet.microsoft.com/download)
+* [Node.js](https://nodejs.org/)
+* [Angular CLI](https://angular.dev/tools/cli)
+* SQL Server / SQL Server LocalDB
+* Git
 
-🔧 Getting Started
+---
 
-Prerequisites
+## 1. Clone Repository
 
-Make sure the following are installed:
-
-.NET 10 SDK
-
-Node.js
-
-Angular CLI
-
-SQL Server / SQL Server LocalDB
-
-Git
-
-Clone the repository
-
+```bash
 git clone <repository-url>
+```
+
+```bash
 cd FileProcess
+```
 
-Configure the database
+---
 
-Update the connection string in the application's configuration:
+## 2. Configure Database
 
+Update your connection string in the application configuration.
+
+Example:
+
+```json
 {
   "ConnectionStrings": {
     "DefaultConnection": "Server=(localdb)\\mssqllocaldb;Database=FileProcessing;Trusted_Connection=True;TrustServerCertificate=True"
   }
 }
+```
 
-Apply migrations
+---
 
-If the repository contains a dedicated migration project, run migrations
-using that project according to its configured startup/dependency
-structure.
+## 3. Apply EF Core Migrations
+
+If the repository contains a dedicated migration project, execute the
+migration using that project according to the repository configuration.
 
 Example:
 
+```bash
 dotnet ef database update
+```
 
-Run the backend
+---
 
+## 4. Run Backend
+
+```bash
 dotnet run
+```
 
-Run the Angular application
+---
 
+## 5. Run Angular Application
+
+Navigate to the frontend project:
+
+```bash
+cd Client/FileProcessWeb
+```
+
+Install dependencies:
+
+```bash
 npm install
+```
+
+Start Angular:
+
+```bash
 ng serve
+```
 
-Then open the Angular application in your browser.
+Open:
 
-🧪 Example Use Cases
+```text
+http://localhost:4200
+```
 
-Compress an Image
+---
 
-Upload Image
-     ↓
-Select Compression Options
-     ↓
-API Processes Image
-     ↓
-Compressed Image
-     ↓
-Download Result
+# 🎯 Project Objectives
 
-Convert JPG → WebP
+This project was built to demonstrate practical experience with:
 
-JPG
- ↓
-Upload
- ↓
-Image Processing Module
- ↓
-Format Conversion
- ↓
-WebP
+* Full-stack application development
+* ASP.NET Core Web API
+* Angular
+* C#
+* Entity Framework Core
+* SQL Server
+* RESTful API design
+* Asynchronous programming
+* File and document processing
+* Image conversion
+* PDF processing
+* ZIP / Unzip operations
+* Modular Monolith architecture
+* Feature-based module organization
+* Shared infrastructure
+* Separate EF Core migration assembly
+* Centralized exception handling
+* Dependency Injection
 
-Image → PDF
+---
 
-Image
- ↓
-Upload
- ↓
-Document Processing Module
- ↓
-PDF Generation
- ↓
-PDF File
+# 📌 Key Implementation Highlights
 
-🎯 Project Goals
+### Backend
 
-The project was built to demonstrate practical implementation of:
+* Built RESTful APIs using ASP.NET Core Web API.
+* Implemented asynchronous file-processing operations.
+* Added centralized exception handling.
+* Organized backend functionality into feature-based modules.
+* Applied Modular Monolith architecture.
+* Used dependency injection for module registration and services.
 
-Full-stack application development
+### File Processing
 
-File and document processing
+* Implemented image compression.
+* Implemented image resizing.
+* Implemented image cropping.
+* Added JPG, PNG, and WebP format conversion.
+* Implemented ZIP and Unzip operations.
+* Added Image-to-PDF conversion.
+* Added PDF-to-Image conversion.
 
-REST API development
+### Infrastructure
 
-Asynchronous programming
+* Integrated SQL Server using Entity Framework Core.
+* Separated EF Core migrations into a dedicated migration assembly.
+* Created shared infrastructure for common application concerns.
 
-Modular Monolith architecture
+---
 
-Feature-based application organization
+# 📊 Architecture Summary
 
-Entity Framework Core
+```text
+                         FILEPROCESS
+                              │
+                              ▼
+                       ┌──────────────┐
+                       │  Angular UI  │
+                       └──────┬───────┘
+                              │
+                              ▼
+                    ┌────────────────────┐
+                    │ ASP.NET Core API   │
+                    └─────────┬──────────┘
+                              │
+              ┌───────────────┼───────────────┐
+              │               │               │
+              ▼               ▼               ▼
+       Image Module    Document Module   File Module
+              │               │               │
+              └───────────────┼───────────────┘
+                              │
+                              ▼
+                    Shared Infrastructure
+                              │
+                              ▼
+                         SQL Server
+                              ▲
+                              │
+                    Separate Migration
+                         Assembly
+```
 
-SQL Server integration
+---
 
-Centralized exception handling
+# 👨‍💻 Author
 
-Separation of infrastructure and migrations
-
-Frontend-to-backend API integration
-
-📌 Architecture Highlights
-
-                    FILEPROCESS
-                        │
-        ┌───────────────┼────────────────┐
-        │               │                │
-        ▼               ▼                ▼
-   Angular UI      ASP.NET Core      SQL Server
-                        │
-                 Modular Monolith
-                        │
-        ┌───────────────┼────────────────┐
-        ▼               ▼                ▼
-   Image Module    Document Module   File Module
-        │               │                │
-        └───────────────┼────────────────┘
-                        ▼
-                Shared Infrastructure
-                        │
-                        ▼
-              Separate Migration Project
-
-📈 What I Implemented
-
-Built a full-stack image and document processing application.
-
-Implemented image compression, resizing, cropping, and format
-conversion.
-
-Added JPG, PNG, and WebP conversion support.
-
-Implemented ZIP and Unzip file operations.
-
-Added Image-to-PDF and PDF-to-Image processing.
-
-Developed RESTful APIs using ASP.NET Core Web API.
-
-Used asynchronous file processing for I/O-heavy operations.
-
-Implemented centralized exception handling.
-
-Organized the backend using a Modular Monolith architecture.
-
-Structured functionality into feature-based modules.
-
-Separated shared infrastructure from individual modules.
-
-Maintained EF Core migrations in a dedicated migration assembly.
-
-👨‍💻 Author
-
-Montu Kharb
+**Montu Kharb**
 
 Full Stack .NET Developer
-ASP.NET Core • C# • Angular • SQL Server • Entity Framework Core
 
-⭐ If you find this project useful
+**Technologies:**
+C# • ASP.NET Core • Angular • SQL Server • Entity Framework Core
 
-Consider giving the repository a ⭐ and exploring the implementation.
+---
+
+<p align="center">
+  Built with ❤️ using ASP.NET Core & Angular
+</p>
+```
