@@ -1,0 +1,28 @@
+<Solution>
+  <Folder Name="/CoreLibrary/">
+    <Project Path="CommonLibrary/CommonLibrary.csproj" Id="096908c6-9155-45c6-9d0d-b054ddb7b4e2" />
+  </Folder>
+  <Folder Name="/Infrastructure/">
+    <Project Path="Caching/Caching.csproj" Id="ba40f7e0-980f-4713-8292-b81993b36022" />
+    <Project Path="Migration/Migration.csproj" Id="81ec1f42-cedc-4341-b07c-b887b41f1a8c" />
+    <Project Path="Persistence/Persistence.csproj" Id="622ee31e-a05a-428f-b383-222b0046a127" />
+  </Folder>
+  <Folder Name="/Modules/" />
+  <Folder Name="/Modules/FileProcessingModule/">
+    <Project Path="FilePrcessingPL/FileProcessingPL.csproj" Id="d832b174-3d98-4b12-aed2-a3f6ebfb7553" />
+    <Project Path="FileProcessingDM/FileProcessingDM.csproj" Id="d170f473-c74c-4336-b592-c84c9dc6d23d" />
+    <Project Path="FileProcessingSL/FileProcessingSL.csproj" Id="3e4bd025-6e19-4aae-bb87-4e9769492e69" />
+    <Project Path="FileProcessingWeb/FileProcessingWeb.csproj" />
+  </Folder>
+  <Folder Name="/SolutionItems/">
+    <File Path=".gitignore" />
+  </Folder>
+  <Folder Name="/Solutions/">
+    <Project Path="ModuleComposition/ModuleComposition.csproj" Id="c1d0f97a-c2cc-44f0-9b3a-7450987e3e29" />
+    <Project Path="webSolution/websolution.client/websolution.client.esproj">
+      <Build />
+      <Deploy />
+    </Project>
+    <Project Path="webSolution/webSolution.Server/webSolution.Server.csproj" />
+  </Folder>
+</Solution>
