@@ -11,6 +11,7 @@ namespace FileProcessingPL.EntityDbSet
         public static void FileProcessingModuleDbSetExt(this ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<User>();
+            modelBuilder.Entity<Roles>();
         }
     }
 }

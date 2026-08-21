@@ -29,7 +29,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\FilePrcessingPL\FileProcessingPL.csproj" />
-    <ProjectReference Include="..\..\Migration\Migration.csproj" />
     <ProjectReference Include="..\..\ModuleComposition\ModuleComposition.csproj" />
     <ProjectReference Include="..\..\Persistence\Persistence.csproj" />
     <ProjectReference Include="..\websolution.client\websolution.client.esproj">

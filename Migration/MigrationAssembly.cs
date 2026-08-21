@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Migration
+
+namespace Infrastructure.FileProcessingMigration
 {
     public class MigrationAssembly
     {

@@ -2,15 +2,12 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Design;
 using Microsoft.Extensions.Options;
-using Migration;
 using Persistence.Context;
 
-namespace webSolution.Server
+namespace Infrastructure.FileProcessingMigration
 {
     public sealed class AppDbContextDesignTimeFactory : IDesignTimeDbContextFactory<AppDbContext>
     {
-
-
 
         public AppDbContext CreateDbContext(string[] args)
         {

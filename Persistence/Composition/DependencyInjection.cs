@@ -1,5 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.DependencyInjection.Extensions;
 using Persistence.Context;
 using System;
 using System.Collections.Generic;
@@ -15,6 +16,7 @@ namespace Persistence.Composition
             {
                 configureOptions(serviceProvider, options); //call back method
             });
+          
 
             return service;
         }

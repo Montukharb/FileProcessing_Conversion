@@ -8,11 +8,11 @@ using Persistence.Context;
 
 #nullable disable
 
-namespace Migration.Migrations
+namespace Infrastructure.FileProcessingMigration.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20260817115914_Initial")]
-    partial class Initial
+    [Migration("20260821203531_Initial20260821203526FileProcessingAndConversion")]
+    partial class Initial20260821203526FileProcessingAndConversion
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -23,6 +23,27 @@ namespace Migration.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
+
+            modelBuilder.Entity("FileProcessingDM.Entities.Roles", b =>
+                {
+                    b.Property<long>("Id")
+                        .HasColumnType("bigint");
+
+                    b.Property<string>("NormalizedName")
+                        .IsRequired()
+                        .ValueGeneratedOnAddOrUpdate()
+                        .HasColumnType("nvarchar(max)")
+                        .HasComputedColumnSql("UPPER([RoleName])");
+
+                    b.Property<string>("RoleName")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Roles");
+                });
 
             modelBuilder.Entity("FileProcessingDM.Entities.User", b =>
                 {
@@ -44,7 +65,7 @@ namespace Migration.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("User");
+                    b.ToTable("Users", (string)null);
                 });
 #pragma warning restore 612, 618
         }

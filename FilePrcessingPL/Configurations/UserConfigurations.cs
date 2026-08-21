@@ -15,6 +15,7 @@ namespace FileProcessingPL.Configurations
             builder.Property(x => x.Name).HasMaxLength(80).IsRequired();
             builder.Property(x => x.Email).HasMaxLength(256).IsRequired();
             //set new table name
+            builder.ToTable("Users");
         }
     }
 }

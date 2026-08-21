@@ -1,4 +1,5 @@
 ﻿using FileProcessingPL.Context;
+using FileProcessingPL.SeedExtension;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.DependencyInjection.Extensions;
 using Persistence.Interface;
@@ -13,6 +14,7 @@ namespace FileProcessingPL.Composition
         public static IServiceCollection FileProcessingServices(this IServiceCollection services)
         {
             services.TryAddEnumerable(ServiceDescriptor.Singleton<IAppDbContextModuleConfigurations, FileProcessingModuleConfigurations>());
+            services.TryAddEnumerable(ServiceDescriptor.Singleton<IAppDbContextSeeder, RoleSeeding>());
 
             return services;
         }
